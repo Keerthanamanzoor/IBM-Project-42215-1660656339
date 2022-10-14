@@ -29,13 +29,11 @@ void loop() {
   delayMicroseconds(5);
   digitalWrite(pingPin, LOW);
 
-  // The same pin is used to read the signal from the PING))): a HIGH pulse
-  // whose duration is the time (in microseconds) from the sending of the ping
-  // to the reception of its echo off of an object.
+  
   pinMode(pingPin, INPUT);
   duration = pulseIn(pingPin, HIGH);
 
-  // convert the time into a distance
+  
   inches = microsecondsToInches(duration);
   cm = microsecondsToCentimeters(duration);
 
@@ -71,7 +69,7 @@ void loop() {
     digitalWrite(4,LOW);
   }
   
-  //temp with fan
+ 
   float value=analogRead(A0);
   float temperature=value*0.48;
   
